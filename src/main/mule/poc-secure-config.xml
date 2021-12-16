@@ -6,7 +6,7 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<flow name="flow-secure-config" doc:id="483a7ead-333c-43e9-bb79-d20252ad48d9" >
 		<http:listener doc:name="Get  /secure" doc:id="de784c27-d0d0-4a6f-9ff1-7e87949d0ad6" config-ref="HTTP_Listener_config" path="/secure"/>
-		<set-payload value="Hello Mule" doc:name="Hello Mule" doc:id="22d78e0c-3b8d-44f9-9c9d-1d7580733cb9" />
+		<set-payload value="Hello Mule123" doc:name="Hello Mule123" doc:id="22d78e0c-3b8d-44f9-9c9d-1d7580733cb9" />
 		<logger level="INFO" doc:name="LOG INFO property files response" doc:id="7b50b099-f5b5-4563-a1c3-8ea26ad742f9" message='#[output application/java&#10;---&#10;"Username: " ++ Mule::p("secure::example.username")&#10;++ "-" ++&#10;"password: " ++ Mule::p("secure::example.password")]'/>
 	</flow>
 </mule>
